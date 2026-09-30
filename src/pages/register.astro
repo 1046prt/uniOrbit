@@ -1,0 +1,216 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Register" scripts={["/scripts/register.js"]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Join UniOrbit</span>
+      <h1>Student Registration</h1>
+      <p>Create your account and join our academic community.</p>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <div class="card auth-wrap">
+        <div class="card-header">
+          <h2>Create new account</h2>
+        </div>
+        <div class="card-body">
+          <form id="register-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="firstName"
+                    placeholder="Enter your first name"
+                    required
+                    autocomplete="given-name"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="lastName"
+                    placeholder="Enter your last name"
+                    required
+                    autocomplete="family-name"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="date-of-birth">Date of Birth <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  <input type="date" id="date-of-birth" name="dob" required autocomplete="bday" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="course-interest">Course of Interest <span class="req" aria-hidden="true">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <select id="course-interest" name="course" required autocomplete="off">
+                  <option value="">-- Select Course --</option>
+                  <option value="cse">B.Tech [Computer Science Engineering]</option>
+                  <option value="ds-ai">B.Tech [Data Science &amp; AI]</option>
+                  <option value="civil">B.Tech [Civil Engineering]</option>
+                  <option value="mechanical">B.Tech [Mechanical Engineering]</option>
+                  <option value="electrical">B.Tech [Electrical Engineering]</option>
+                  <option value="electronics">B.Tech [Electronics &amp; Communication]</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username">Username <span class="req" aria-hidden="true">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-at" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Choose a username"
+                  required
+                  autocomplete="username"
+                  minlength="3"
+                  maxlength="20"
+                  pattern="[a-zA-Z0-9_]+"
+                />
+              </div>
+              <p class="hint">3–20 characters: letters, numbers and underscores only.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password <span class="req" aria-hidden="true">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Create a strong password"
+                  required
+                  autocomplete="new-password"
+                  minlength="8"
+                />
+                <button type="button" class="pw-toggle" aria-label="Show password">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div
+                class="pw-meter"
+                id="pw-meter"
+                role="progressbar"
+                aria-label="Password strength"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="4"
+              >
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <p class="pw-label">Use 8+ characters with upper, lower, number and symbol.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password <span class="req" aria-hidden="true">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirmPassword"
+                  placeholder="Confirm your password"
+                  required
+                  autocomplete="new-password"
+                />
+                <button type="button" class="pw-toggle" aria-label="Show password">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms">
+                  I agree to the <a href="#" class="terms-link">terms and conditions</a>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                <label for="newsletter">Subscribe to our newsletter for updates</label>
+              </div>
+            </div>
+
+            <div class="btn-container">
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-user-plus" aria-hidden="true"></i> Create account
+              </button>
+            </div>
+
+            <div class="form-links">
+              <p class="login-link">
+                Already have an account? <a href="/login">Login here</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="notification" id="notification" role="status" aria-live="polite" hidden>
+    <div class="notification-icon" aria-hidden="true">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="notification-content">
+      <strong>Success!</strong> Account created successfully. Redirecting to login...
+    </div>
+  </div>
+</Base>

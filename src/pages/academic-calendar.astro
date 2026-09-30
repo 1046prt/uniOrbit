@@ -1,0 +1,130 @@
+---
+import Base from "../layouts/Base.astro";
+
+const semesters = [
+  {
+    title: "First Semester (August – December 2024)",
+    events: [
+      ["15", "Aug", "Semester Begins", "First day of classes for all students"],
+      ["30", "Aug", "Last Date for Course Registration", "Final deadline for course registration and changes"],
+      ["05", "Sep", "Labor Day Holiday", "University closed for Labor Day"],
+      ["15", "Oct", "Mid-Semester Examinations", "Mid-term exams for all courses"],
+      ["28", "Nov", "Thanksgiving Break", "University closed for Thanksgiving holiday"],
+      ["15", "Dec", "Final Examinations", "End-semester examinations begin"],
+      ["20", "Dec", "Semester Ends", "First semester concludes"],
+    ],
+  },
+  {
+    title: "Second Semester (January – May 2025)",
+    events: [
+      ["15", "Jan", "Semester Begins", "Second semester classes commence"],
+      ["30", "Jan", "Last Date for Course Registration", "Final deadline for course registration"],
+      ["15", "Feb", "Presidents' Day Holiday", "University closed for Presidents' Day"],
+      ["15", "Mar", "Mid-Semester Examinations", "Mid-term exams for all courses"],
+      ["20", "Mar", "Spring Break", "One week spring break"],
+      ["15", "May", "Final Examinations", "End-semester examinations begin"],
+      ["25", "May", "Commencement Ceremony", "Graduation ceremony for graduating students"],
+      ["30", "May", "Semester Ends", "Academic year concludes"],
+    ],
+  },
+];
+
+const deadlines = [
+  ["fa-graduation-cap", "Course Registration", ["August 30, 2024 (Semester 1)", "January 30, 2025 (Semester 2)"]],
+  ["fa-indian-rupee-sign", "Fee Payment", ["August 25, 2024 (Semester 1)", "January 25, 2025 (Semester 2)"]],
+  ["fa-file-alt", "Project Submissions", ["December 10, 2024 (Semester 1)", "May 10, 2025 (Semester 2)"]],
+  ["fa-clipboard-check", "Exam Registration", ["December 5, 2024 (Semester 1)", "May 5, 2025 (Semester 2)"]],
+];
+
+const downloads = [
+  ["fa-file-arrow-down", "Download PDF Calendar"],
+  ["fa-calendar-plus", "Add to Google Calendar"],
+  ["fa-calendar-day", "Add to Outlook"],
+];
+---
+<Base title="Academic Calendar" scripts={[]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Calendar</span>
+      <h1>Academic Calendar</h1>
+      <p>Important dates and events for the academic year 2024–2025.</p>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <div class="card card-accent">
+        <div class="card-header">
+          <h2>Academic Year 2024–2025</h2>
+        </div>
+        <div class="card-body">
+          <div class="calendar-note">
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+            <p>
+              <strong>Note:</strong> All dates are subject to change. Please check
+              regularly for updates and announcements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {
+        semesters.map((semester) => (
+          <section class="semester-calendar">
+            <h2 class="section-title">{semester.title}</h2>
+            <div class="calendar-grid">
+              {semester.events.map(([day, month, title, description]) => (
+                <article class="calendar-event">
+                  <div class="event-date">
+                    <span class="day">{day}</span>
+                    <span class="month">{month}</span>
+                  </div>
+                  <div class="event-details">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+
+      <section class="important-deadlines">
+        <h2 class="section-title">Important Deadlines</h2>
+        <div class="deadlines-grid">
+          {
+            deadlines.map(([icon, title, dates]) => (
+              <article class="deadline-card">
+                <div class="deadline-icon">
+                  <i class={`fas ${icon}`} aria-hidden="true" />
+                </div>
+                <h3>{title}</h3>
+                {dates.map((date) => (
+                  <p>{date}</p>
+                ))}
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Download Calendar</h2>
+        </div>
+        <div class="card-body">
+          <div class="download-options">
+            {
+              downloads.map(([icon, label], i) => (
+                <a href="#" class={`btn ${i === 0 ? "btn-primary" : "btn-outline"}`}>
+                  <i class={`fas ${icon}`} aria-hidden="true" /> {label}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Base>

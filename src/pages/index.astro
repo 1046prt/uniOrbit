@@ -1,0 +1,175 @@
+---
+import Base from "../layouts/Base.astro";
+
+const programs = [
+  ["Computer Science", "cse", "fa-laptop-code"],
+  ["Data Science & AI", "dsai", "fa-brain"],
+  ["Civil", "civil", "fa-helmet-safety"],
+  ["Mechanical", "mechanical", "fa-gears"],
+  ["Electrical", "electrical", "fa-bolt"],
+  ["Electronics & Comm.", "electronics", "fa-microchip"],
+];
+
+const stats = [
+  ["5,000+", "Students"],
+  ["50+", "Courses"],
+  ["100+", "Faculty"],
+  ["95%", "Satisfaction"],
+];
+
+const quickLinks = [
+  ["Course registration", "/course-registration", "fa-pen-to-square"],
+  ["Fee structure", "/fees/fee-structure", "fa-receipt"],
+  ["Academic calendar", "/academic-calendar", "fa-calendar-days"],
+  ["Student support", "/contact", "fa-headset"],
+];
+
+const badges = [
+  ["NAAC A++ accredited", "fa-certificate"],
+  ["Six B.Tech programmes", "fa-layer-group"],
+  ["24/7 support desk", "fa-circle-check"],
+];
+---
+
+<Base title="Home">
+  <section class="hero" slot="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow"><i class="fas fa-satellite" aria-hidden="true"></i> Registrations open</span>
+        <h1>Your whole campus, <em>in one orbit.</em></h1>
+        <p>
+          Pick courses, check fees and track every deadline without hopping between
+          five different portals.
+        </p>
+        <div class="hero-actions">
+          <a href="/course-registration" class="btn btn-primary btn-lg">
+            Start registration <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="/courses/cse" class="btn btn-outline btn-lg">Browse courses</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <p class="panel-label">Jump straight in</p>
+        <ul class="panel-list">
+          {
+            quickLinks.map(([label, href, icon]) => (
+              <li>
+                <a href={href}>
+                  <span class="ico" aria-hidden="true">
+                    <i class={`fas ${icon}`} />
+                  </span>
+                  {label}
+                  <i class="fas fa-arrow-right arw" aria-hidden="true" />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="hero-badges">
+          {
+            badges.map(([label, icon]) => (
+              <span>
+                <i class={`fas ${icon}`} aria-hidden="true" /> {label}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <div class="stat-strip">
+        {
+          stats.map(([n, l]) => (
+            <div>
+              <strong>{n}</strong>
+              <span>{l}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="band-head">
+        <span class="eyebrow">Why UniOrbit</span>
+        <h2>Less paperwork, more studying</h2>
+        <p>
+          Everything the academic office would ask you for, gathered into a single
+          calm workflow.
+        </p>
+      </div>
+
+      <div class="bento">
+        <article class="tile tile-lg">
+          <i class="fas fa-bolt" aria-hidden="true"></i>
+          <h3>Register in minutes</h3>
+          <p>
+            A four-step guided form walks you from personal details to subject
+            selection, with progress saved as you go.
+          </p>
+          <a href="/course-registration" class="text-link">
+            Open the form <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="tile">
+          <i class="fas fa-mobile-screen" aria-hidden="true"></i>
+          <h3>Works on any screen</h3>
+          <p>Phone, tablet or lab desktop — same portal, no app to install.</p>
+        </article>
+
+        <article class="tile">
+          <i class="fas fa-shield-halved" aria-hidden="true"></i>
+          <h3>Safe by default</h3>
+          <p>Your details stay protected end to end with strict validation.</p>
+        </article>
+
+        <article class="tile tile-wide">
+          <i class="fas fa-headset" aria-hidden="true"></i>
+          <h3>Help when you need it</h3>
+          <p>
+            Stuck on a deadline or a fee query? The support desk answers around the
+            clock and keeps a record of every request.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="band-head">
+        <span class="eyebrow">Programmes</span>
+        <h2>Find your department</h2>
+        <p>Six B.Tech programmes, each with a full curriculum, fee sheet and career map.</p>
+      </div>
+
+      <div class="program-grid">
+        {
+          programs.map(([name, slug, icon]) => (
+            <a href={`/courses/${slug}`} class="program">
+              <i class={`fas ${icon}`} aria-hidden="true"></i>
+              <span>{name}</span>
+              <i class="fas fa-arrow-up-right-from-square go" aria-hidden="true"></i>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cta-panel">
+        <div>
+          <h2>New here? Get your student account.</h2>
+          <p>It takes a minute, and you can register for courses right after.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="/register" class="btn btn-accent btn-lg">Create account</a>
+          <a href="/login" class="btn btn-outline-light btn-lg">I already have one</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Base>

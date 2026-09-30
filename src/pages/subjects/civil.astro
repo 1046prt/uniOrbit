@@ -1,0 +1,144 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Civil Engineering Subjects" scripts={[]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Subjects</span>
+      <h1>Civil Engineering Subjects</h1>
+      <p>Comprehensive curriculum covering structural, geotechnical, transportation, and environmental engineering</p>
+      <div class="hero-actions">
+        <a href="/course-registration" class="btn btn-primary btn-lg">
+          <i class="fas fa-edit" aria-hidden="true"></i> Register Now
+        </a>
+        <a href="/courses/civil" class="btn btn-outline btn-lg">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i> View Course
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <section class="subject-overview">
+        <div class="card">
+          <h2 class="section-title">Subject Overview</h2>
+          <p class="overview-text">
+            Our Civil Engineering program offers a comprehensive curriculum
+            designed to prepare students for careers in infrastructure
+            development, construction management, and environmental
+            engineering. The subjects provide both theoretical knowledge and
+            practical skills in structural analysis, geotechnical engineering,
+            transportation systems, and water resources.
+          </p>
+          <div class="overview-stats">
+            <div class="stat-item"><div class="stat-number">38+</div><div class="stat-label">Core Subjects</div></div>
+            <div class="stat-item"><div class="stat-number">12+</div><div class="stat-label">Elective Subjects</div></div>
+            <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Semesters</div></div>
+            <div class="stat-item"><div class="stat-number">180</div><div class="stat-label">Total Credits</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="semester-subjects">
+        <div class="card">
+          <h2 class="section-title">Semester-wise Subject Distribution</h2>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 1</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-calculator" aria-hidden="true"></i><h4>Engineering Mathematics I</h4></div><p>Calculus, Linear Algebra, Differential Equations</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-draw-polygon" aria-hidden="true"></i><h4>Engineering Graphics</h4></div><p>Technical Drawing, CAD, Projection Methods</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-atom" aria-hidden="true"></i><h4>Engineering Physics</h4></div><p>Mechanics, Waves, Optics, Material Science</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-flask" aria-hidden="true"></i><h4>Engineering Chemistry</h4></div><p>Water Treatment, Corrosion, Building Materials Chemistry</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+            </div>
+          </div>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 2</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-calculator" aria-hidden="true"></i><h4>Engineering Mathematics II</h4></div><p>Complex Analysis, Transforms, Numerical Methods</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-cube" aria-hidden="true"></i><h4>Engineering Mechanics</h4></div><p>Statics, Dynamics, Strength of Materials Basics</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-mountain" aria-hidden="true"></i><h4>Surveying I</h4></div><p>Chain Surveying, Compass Surveying, Leveling</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-tree" aria-hidden="true"></i><h4>Environmental Science</h4></div><p>Ecology, Pollution Control, Environmental Impact Assessment</p><div class="subject-details"><span class="credits">2 Credits</span><span class="type core">Core</span></div></div>
+            </div>
+          </div>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 3</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-building" aria-hidden="true"></i><h4>Strength of Materials</h4></div><p>Stress, Strain, Beams, Columns, Torsion</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-tachometer-alt" aria-hidden="true"></i><h4>Fluid Mechanics</h4></div><p>Fluid Properties, Flow Dynamics, Pipe Flow, Open Channel</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-mountain" aria-hidden="true"></i><h4>Surveying II</h4></div><p>Theodolite, Tacheometry, Curve Setting, GPS Basics</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-cement-mixer" aria-hidden="true"></i><h4>Building Materials & Construction</h4></div><p>Cement, Concrete, Bricks, Stones, Construction Techniques</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+            </div>
+          </div>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 4</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-building" aria-hidden="true"></i><h4>Structural Analysis I</h4></div><p>Determinate Structures, Deflections, Influence Lines</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-seedling" aria-hidden="true"></i><h4>Geotechnical Engineering I</h4></div><p>Soil Properties, Classification, Compaction, Permeability</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-road" aria-hidden="true"></i><h4>Transportation Engineering I</h4></div><p>Highway Planning, Geometric Design, Pavement Materials</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-water" aria-hidden="true"></i><h4>Hydraulic Engineering</h4></div><p>Open Channel Flow, Hydraulic Machines, Flood Control</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+            </div>
+          </div>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 5</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-building" aria-hidden="true"></i><h4>Structural Analysis II</h4></div><p>Indeterminate Structures, Matrix Methods, Plastic Analysis</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-seedling" aria-hidden="true"></i><h4>Geotechnical Engineering II</h4></div><p>Foundation Engineering, Slope Stability, Retaining Walls</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-road" aria-hidden="true"></i><h4>Transportation Engineering II</h4></div><p>Pavement Design, Traffic Engineering, Railway Engineering</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-cogs" aria-hidden="true"></i><h4>Construction Technology & Management</h4></div><p>Project Planning, CPM/PERT, Equipment, Quality Control</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+            </div>
+          </div>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 6</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-building" aria-hidden="true"></i><h4>Design of Concrete Structures</h4></div><p>Limit State Design, Beams, Slabs, Columns, Footings</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-industry" aria-hidden="true"></i><h4>Design of Steel Structures</h4></div><p>Tension/Compression Members, Beams, Connections, Frames</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-water" aria-hidden="true"></i><h4>Water Resources Engineering</h4></div><p>Hydrology, Irrigation, Dams, Groundwater Engineering</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-leaf" aria-hidden="true"></i><h4>Environmental Engineering</h4></div><p>Water Supply, Wastewater Treatment, Solid Waste Management</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+            </div>
+          </div>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 7</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-laptop-code" aria-hidden="true"></i><h4>Capstone Project I</h4></div><p>Project Planning, Site Investigation, Preliminary Design</p><div class="subject-details"><span class="credits">6 Credits</span><span class="type project">Project</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-graduation-cap" aria-hidden="true"></i><h4>Professional Elective I</h4></div><p>Bridge Engg / Earthquake Engg / Advanced Foundation</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type elective">Elective</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-graduation-cap" aria-hidden="true"></i><h4>Professional Elective II</h4></div><p>GIS Applications / Smart Cities / Sustainable Construction</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type elective">Elective</span></div></div>
+            </div>
+          </div>
+
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 8</h3>
+            <div class="subjects-grid">
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-laptop-code" aria-hidden="true"></i><h4>Capstone Project II</h4></div><p>Detailed Design, Analysis, Drawings, Report, Presentation</p><div class="subject-details"><span class="credits">6 Credits</span><span class="type project">Project</span></div></div>
+              <div class="subject-card"><div class="subject-header"><i class="fas fa-briefcase" aria-hidden="true"></i><h4>Industry Internship</h4></div><p>Construction site / Design office experience</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type internship">Internship</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="elective-subjects">
+        <div class="card">
+          <h2 class="section-title">Professional Elective Subjects</h2>
+          <p class="section-description">Students can choose from the following elective subjects:</p>
+          <div class="elective-categories">
+            <div class="elective-category"><h3>Structural Engineering</h3><ul class="elective-subjects"><li>Advanced Structural Analysis</li><li>Bridge Engineering</li><li>Earthquake Engineering</li><li>Prestressed Concrete</li></ul></div>
+            <div class="elective-category"><h3>Geotechnical Engineering</h3><ul class="elective-subjects"><li>Advanced Foundation Engineering</li><li>Ground Improvement Techniques</li><li>Rock Mechanics</li><li>Geosynthetics</li></ul></div>
+            <div class="elective-category"><h3>Transportation & Environmental</h3><ul class="elective-subjects"><li>Airport Engineering</li><li>Urban Transportation Planning</li><li>Advanced Water Treatment</li><li>Climate Resilient Infrastructure</li></ul></div>
+            <div class="elective-category"><h3>Management & Technology</h3><ul class="elective-subjects"><li>Construction Project Management</li><li>BIM & Digital Construction</li><li>Smart Cities & IoT in Civil Engg</li><li>Construction Economics</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="card"><h2>Ready to Build the Future?</h2><p>Explore our comprehensive Civil Engineering curriculum and begin your path to becoming a successful civil engineer.</p><div class="cta-buttons"><a href="/course-registration" class="btn btn-primary btn-lg"><i class="fas fa-edit" aria-hidden="true"></i> Apply Now</a><a href="/contact" class="btn btn-outline btn-lg"><i class="fas fa-phone" aria-hidden="true"></i> Contact Department</a></div></div>
+      </section>
+    </div>
+  </main>
+</Base>

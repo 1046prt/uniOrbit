@@ -1,0 +1,510 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Computer Science Engineering Subjects" scripts={[]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Subjects</span>
+      <h1>Computer Science Engineering Subjects</h1>
+      <p>Comprehensive curriculum covering modern computing technologies and software development</p>
+      <div class="hero-actions">
+        <a href="/course-registration" class="btn btn-primary btn-lg">
+          <i class="fas fa-edit" aria-hidden="true"></i> Register Now
+        </a>
+        <a href="/courses/cse" class="btn btn-outline btn-lg">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i> View Course
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <!-- Subject Overview -->
+      <section class="subject-overview">
+        <div class="card">
+          <h2 class="section-title">Subject Overview</h2>
+          <p class="overview-text">
+            Our Computer Science Engineering program offers a comprehensive
+            curriculum designed to prepare students for the rapidly evolving
+            technology industry. The subjects are carefully structured to
+            provide both theoretical knowledge and practical skills in
+            software development, system design, and emerging technologies.
+          </p>
+          <div class="overview-stats">
+            <div class="stat-item">
+              <div class="stat-number">40+</div>
+              <div class="stat-label">Core Subjects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Elective Subjects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">8</div>
+              <div class="stat-label">Semesters</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">180</div>
+              <div class="stat-label">Total Credits</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Semester-wise Subjects -->
+      <section class="semester-subjects">
+        <div class="card">
+          <h2 class="section-title">Semester-wise Subject Distribution</h2>
+
+          <!-- Semester 1 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 1</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-calculator" aria-hidden="true"></i>
+                  <h4>Engineering Mathematics I</h4>
+                </div>
+                <p>Calculus, Linear Algebra, Differential Equations</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                  <h4>Programming Fundamentals</h4>
+                </div>
+                <p>C Programming, Data Types, Control Structures</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-draw-polygon" aria-hidden="true"></i>
+                  <h4>Engineering Drawing</h4>
+                </div>
+                <p>Technical Drawing, CAD Basics, Blueprint Reading</p>
+                <div class="subject-details">
+                  <span class="credits">2 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-atom" aria-hidden="true"></i>
+                  <h4>Physics</h4>
+                </div>
+                <p>Mechanics, Waves, Optics, Modern Physics</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 2 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 2</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-calculator" aria-hidden="true"></i>
+                  <h4>Engineering Mathematics II</h4>
+                </div>
+                <p>Complex Analysis, Probability, Statistics</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-microchip" aria-hidden="true"></i>
+                  <h4>Digital Logic Design</h4>
+                </div>
+                <p>Boolean Algebra, Logic Gates, Sequential Circuits</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-server" aria-hidden="true"></i>
+                  <h4>Computer Organization</h4>
+                </div>
+                <p>CPU Architecture, Memory Systems, I/O</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-sitemap" aria-hidden="true"></i>
+                  <h4>Data Structures</h4>
+                </div>
+                <p>Arrays, Linked Lists, Trees, Graphs</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 3 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 3</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-cube" aria-hidden="true"></i>
+                  <h4>Object-Oriented Programming</h4>
+                </div>
+                <p>Java, Classes, Inheritance, Polymorphism</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-database" aria-hidden="true"></i>
+                  <h4>Database Management Systems</h4>
+                </div>
+                <p>SQL, ER Diagrams, Normalization, Transactions</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-network-wired" aria-hidden="true"></i>
+                  <h4>Computer Networks</h4>
+                </div>
+                <p>OSI Model, TCP/IP, Network Protocols</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-desktop" aria-hidden="true"></i>
+                  <h4>Operating Systems</h4>
+                </div>
+                <p>Process Management, Memory Management, File Systems</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 4 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 4</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-cogs" aria-hidden="true"></i>
+                  <h4>Software Engineering</h4>
+                </div>
+                <p>SDLC, UML, Testing, Project Management</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                  <h4>Design & Analysis of Algorithms</h4>
+                </div>
+                <p>Complexity Analysis, Sorting, Searching, Dynamic Programming</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-globe" aria-hidden="true"></i>
+                  <h4>Web Technologies</h4>
+                </div>
+                <p>HTML, CSS, JavaScript, PHP, MySQL</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                  <h4>Mobile Application Development</h4>
+                </div>
+                <p>Android Development, iOS Basics, Cross-platform Apps</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 5 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 5</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-cloud" aria-hidden="true"></i>
+                  <h4>Cloud Computing</h4>
+                </div>
+                <p>AWS, Azure, Virtualization, Distributed Systems</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                  <h4>Cybersecurity</h4>
+                </div>
+                <p>Network Security, Cryptography, Ethical Hacking</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-brain" aria-hidden="true"></i>
+                  <h4>Machine Learning</h4>
+                </div>
+                <p>Supervised Learning, Unsupervised Learning, Neural Networks</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                  <h4>Software Architecture</h4>
+                </div>
+                <p>Design Patterns, Microservices, Scalability</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 6 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 6</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-robot" aria-hidden="true"></i>
+                  <h4>Artificial Intelligence</h4>
+                </div>
+                <p>Search Algorithms, Knowledge Representation, Expert Systems</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                  <h4>Big Data Analytics</h4>
+                </div>
+                <p>Hadoop, Spark, Data Mining, Visualization</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-wifi" aria-hidden="true"></i>
+                  <h4>Internet of Things</h4>
+                </div>
+                <p>IoT Architecture, Sensors, Embedded Systems</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-code-branch" aria-hidden="true"></i>
+                  <h4>DevOps</h4>
+                </div>
+                <p>CI/CD, Docker, Kubernetes, Infrastructure as Code</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type core">Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 7 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 7</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                  <h4>Capstone Project I</h4>
+                </div>
+                <p>Project Planning, Research, Implementation</p>
+                <div class="subject-details">
+                  <span class="credits">6 Credits</span>
+                  <span class="type project">Project</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <h4>Professional Elective I</h4>
+                </div>
+                <p>Choose from specialized topics</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type elective">Elective</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <h4>Professional Elective II</h4>
+                </div>
+                <p>Choose from specialized topics</p>
+                <div class="subject-details">
+                  <span class="credits">3 Credits</span>
+                  <span class="type elective">Elective</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 8 -->
+          <div class="semester-section">
+            <h3 class="semester-title">Semester 8</h3>
+            <div class="subjects-grid">
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                  <h4>Capstone Project II</h4>
+                </div>
+                <p>Project Completion, Documentation, Presentation</p>
+                <div class="subject-details">
+                  <span class="credits">6 Credits</span>
+                  <span class="type project">Project</span>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-header">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i>
+                  <h4>Industry Internship</h4>
+                </div>
+                <p>Real-world experience in industry</p>
+                <div class="subject-details">
+                  <span class="credits">4 Credits</span>
+                  <span class="type internship">Internship</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Elective Subjects -->
+      <section class="elective-subjects">
+        <div class="card">
+          <h2 class="section-title">Professional Elective Subjects</h2>
+          <p class="section-description">
+            Students can choose from the following elective subjects based on
+            their interests and career goals:
+          </p>
+
+          <div class="elective-categories">
+            <div class="elective-category">
+              <h3>Software Development</h3>
+              <ul class="elective-subjects">
+                <li>Advanced Java Programming</li>
+                <li>Python for Data Science</li>
+                <li>Full Stack Development</li>
+                <li>Game Development</li>
+              </ul>
+            </div>
+            <div class="elective-category">
+              <h3>Data Science & AI</h3>
+              <ul class="elective-subjects">
+                <li>Deep Learning</li>
+                <li>Natural Language Processing</li>
+                <li>Computer Vision</li>
+                <li>Reinforcement Learning</li>
+              </ul>
+            </div>
+            <div class="elective-category">
+              <h3>Cybersecurity</h3>
+              <ul class="elective-subjects">
+                <li>Network Security</li>
+                <li>Web Application Security</li>
+                <li>Digital Forensics</li>
+                <li>Blockchain Technology</li>
+              </ul>
+            </div>
+            <div class="elective-category">
+              <h3>Emerging Technologies</h3>
+              <ul class="elective-subjects">
+                <li>Edge Computing</li>
+                <li>5G Networks</li>
+                <li>Quantum Computing</li>
+                <li>Augmented Reality</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="cta-section">
+        <div class="card">
+          <h2>Ready to Start Your CSE Journey?</h2>
+          <p>
+            Explore our comprehensive curriculum and begin your path to
+            becoming a successful software engineer.
+          </p>
+          <div class="cta-buttons">
+            <a
+              href="/course-registration"
+              class="btn btn-primary btn-lg"
+            >
+              <i class="fas fa-edit" aria-hidden="true"></i> Apply Now
+            </a>
+            <a href="/contact" class="btn btn-outline btn-lg">
+              <i class="fas fa-phone" aria-hidden="true"></i> Contact Department
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Base>

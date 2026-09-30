@@ -1,0 +1,138 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const fees = [
+  ["fa-laptop-code", "Computer Science Engineering", 8500, 1200, 300, 500],
+  ["fa-brain", "Data Science & AI", 9000, 1500, 300, 700],
+  ["fa-building", "Civil Engineering", 7500, 1000, 300, 400],
+  ["fa-cogs", "Mechanical Engineering", 7800, 1300, 300, 400],
+  ["fa-bolt", "Electrical Engineering", 8200, 1400, 300, 500],
+  ["fa-microchip", "Electronics & Communication", 8000, 1300, 300, 500],
+];
+
+const money = (n) => `$${n.toLocaleString("en-US")}`;
+
+const extraFees = [
+  ["fa-id-card", "Student ID Card", "$50 (one-time)"],
+  ["fa-book", "Textbooks & Materials", "$500 – $800 per semester"],
+  ["fa-bed", "Hostel Accommodation", "$2,000 per semester"],
+  ["fa-utensils", "Mess Charges", "$1,200 per semester"],
+];
+
+const paymentInfo = [
+  ["fa-calendar-alt", "Payment Schedule", "Fees are due at the beginning of each semester. Late payments may incur additional charges."],
+  ["fa-credit-card", "Payment Methods", "We accept online payments, bank transfers, and credit/debit cards. Installment plans are available."],
+  ["fa-percentage", "Late Payment Charges", "A 5% late fee will be applied for payments received after the due date."],
+];
+---
+<Base title="Fee Structure" scripts={[]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Fees</span>
+      <h1>Fee Structure</h1>
+      <p>Transparent and comprehensive fee breakdown for all programs.</p>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <div class="card card-accent">
+        <div class="card-header">
+          <h2>Academic Year 2024–2025 Fee Structure</h2>
+        </div>
+        <div class="card-body">
+          <div class="fee-note">
+            <i class="fas fa-circle-info" aria-hidden="true"></i>
+            <p>
+              <strong>Note:</strong> All fees are per semester and subject to change.
+              Additional fees may apply for specialized courses and facilities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="course-fees">
+        <h2 class="section-title">Course-wise Fee Breakdown</h2>
+        <div class="fees-grid">
+          {
+            fees.map(([icon, name, tuition, lab, library, tech]) => (
+              <article class="fee-card">
+                <div class="fee-card-header">
+                  <i class={`fas ${icon}`} aria-hidden="true" />
+                  <h3>{name}</h3>
+                </div>
+                <div class="fee-card-body">
+                  <div class="fee-item">
+                    <span class="fee-label">Tuition Fee</span>
+                    <span class="fee-amount">{money(tuition)}</span>
+                  </div>
+                  <div class="fee-item">
+                    <span class="fee-label">Laboratory Fee</span>
+                    <span class="fee-amount">{money(lab)}</span>
+                  </div>
+                  <div class="fee-item">
+                    <span class="fee-label">Library Fee</span>
+                    <span class="fee-amount">{money(library)}</span>
+                  </div>
+                  <div class="fee-item">
+                    <span class="fee-label">Technology Fee</span>
+                    <span class="fee-amount">{money(tech)}</span>
+                  </div>
+                  <div class="fee-total">
+                    <span class="fee-label">Total per semester</span>
+                    <span class="fee-amount">{money(tuition + lab + library + tech)}</span>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="additional-fees">
+        <h2 class="section-title">Additional Fees &amp; Charges</h2>
+        <div class="additional-fees-grid">
+          {
+            extraFees.map(([icon, title, amount]) => (
+              <article class="additional-fee-card">
+                <div class="additional-fee-icon">
+                  <i class={`fas ${icon}`} aria-hidden="true" />
+                </div>
+                <h3>{title}</h3>
+                <p class="fee-amount">{amount}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Payment Information</h2>
+        </div>
+        <div class="card-body">
+          <div class="payment-details">
+            {
+              paymentInfo.map(([icon, title, text]) => (
+                <article class="payment-item">
+                  <h3>
+                    <i class={`fas ${icon}`} aria-hidden="true" /> {title}
+                  </h3>
+                  <p>{text}</p>
+                </article>
+              ))
+            }
+          </div>
+          <div class="payment-actions">
+            <a href="/course-registration" class="btn btn-primary">
+              <i class="fas fa-file-signature" aria-hidden="true"></i> Proceed to registration
+            </a>
+            <a href="/contact" class="btn btn-outline">
+              <i class="fas fa-headset" aria-hidden="true"></i> Contact finance office
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Base>

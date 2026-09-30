@@ -1,0 +1,38 @@
+---
+import Base from "../layouts/Base.astro";
+
+const links = [
+  ["/fees/fee-structure", "Fee structure"],
+  ["/academic-calendar", "Calendar"],
+  ["/courses/cse", "Courses"],
+  ["/contact", "Get help"],
+];
+---
+<Base title="Page not found">
+  <section class="lost" slot="hero">
+    <div class="container">
+      <div class="lost-code">
+        <i class="fas fa-satellite" aria-hidden="true" />
+        <span>404 — Orbit lost</span>
+      </div>
+      <h1>Page not found</h1>
+      <p>
+        The page you're looking for might have drifted out of orbit, or the link is
+        stale.
+      </p>
+      <div class="hero-actions">
+        <a href="/" class="btn btn-primary btn-lg">
+          <i class="fas fa-house" aria-hidden="true"></i> Back to home
+        </a>
+        <a href="/courses/cse" class="btn btn-outline btn-lg">Browse courses</a>
+      </div>
+      <div class="lost-links">
+        {links.map(([href, label]) => <a href={href}>{label}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container"></div>
+  </main>
+</Base>

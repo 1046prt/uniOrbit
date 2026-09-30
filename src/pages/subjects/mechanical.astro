@@ -1,0 +1,85 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Mechanical Engineering Subjects" scripts={[]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Subjects</span>
+      <h1>Mechanical Engineering Subjects</h1>
+      <p>Comprehensive curriculum covering thermodynamics, manufacturing, design, and automation</p>
+      <div class="hero-actions">
+        <a href="/course-registration" class="btn btn-primary btn-lg"><i class="fas fa-edit" aria-hidden="true"></i> Register Now</a>
+        <a href="/courses/mechanical" class="btn btn-outline btn-lg"><i class="fas fa-graduation-cap" aria-hidden="true"></i> View Course</a>
+      </div>
+    </div>
+  </section>
+  <main class="page-main" id="main">
+    <div class="container">
+      <section class="subject-overview"><div class="card"><h2 class="section-title">Subject Overview</h2><p class="overview-text">Our Mechanical Engineering program provides a strong foundation in core mechanical principles and modern manufacturing technologies. Students gain expertise in design, analysis, and manufacturing of mechanical systems.</p><div class="overview-stats"><div class="stat-item"><div class="stat-number">40+</div><div class="stat-label">Core Subjects</div></div><div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">Elective Subjects</div></div><div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Semesters</div></div><div class="stat-item"><div class="stat-number">180</div><div class="stat-label">Total Credits</div></div></div></div></section>
+
+      <section class="semester-subjects"><div class="card"><h2 class="section-title">Semester-wise Subject Distribution</h2>
+        <div class="semester-section"><h3 class="semester-title">Semester 1</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-calculator" aria-hidden="true"></i><h4>Engineering Mathematics I</h4></div><p>Calculus, Linear Algebra, Differential Equations</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-draw-polygon" aria-hidden="true"></i><h4>Engineering Graphics</h4></div><p>Technical Drawing, CAD, Projections, Sections</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-atom" aria-hidden="true"></i><h4>Engineering Physics</h4></div><p>Mechanics, Thermodynamics, Waves, Modern Physics</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-flask" aria-hidden="true"></i><h4>Engineering Chemistry</h4></div><p>Materials Chemistry, Corrosion, Fuels, Lubricants</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 2</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-calculator" aria-hidden="true"></i><h4>Engineering Mathematics II</h4></div><p>Complex Variables, Transforms, Numerical Methods</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cube" aria-hidden="true"></i><h4>Engineering Mechanics</h4></div><p>Statics, Dynamics, Kinetics, Work-Energy</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-fire" aria-hidden="true"></i><h4>Basic Thermodynamics</h4></div><p>Laws of Thermodynamics, Properties, Cycles</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-code" aria-hidden="true"></i><h4>Programming for Engineers</h4></div><p>C/Python, Numerical Computing, Data Analysis</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 3</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cogs" aria-hidden="true"></i><h4>Mechanics of Materials</h4></div><p>Stress-Strain, Beam Theory, Torsion, Buckling</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-tachometer-alt" aria-hidden="true"></i><h4>Fluid Mechanics & Machinery</h4></div><p>Fluid Properties, Flow, Pumps, Turbines</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-fire" aria-hidden="true"></i><h4>Applied Thermodynamics</h4></div><p>Gas/Vapor Cycles, IC Engines, Compressors</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-industry" aria-hidden="true"></i><h4>Manufacturing Processes I</h4></div><p>Casting, Forming, Welding, Machining Basics</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 4</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cogs" aria-hidden="true"></i><h4>Theory of Machines</h4></div><p>Kinematics, Dynamics, Gears, Cams, Balancing</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-industry" aria-hidden="true"></i><h4>Manufacturing Processes II</h4></div><p>CNC, Non-traditional Machining, Metrology</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cube" aria-hidden="true"></i><h4>Machine Design I</h4></div><p>Design Process, Shafts, Keys, Couplings, Springs</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-temperature-high" aria-hidden="true"></i><h4>Heat Transfer</h4></div><p>Conduction, Convection, Radiation, Heat Exchangers</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 5</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cube" aria-hidden="true"></i><h4>Machine Design II</h4></div><p>Bearings, Gears, Brakes, Clutches, Belt Drives</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-robot" aria-hidden="true"></i><h4>Mechatronics</h4></div><p>Sensors, Actuators, PLC, Microcontrollers</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-industry" aria-hidden="true"></i><h4>Production Planning & Control</h4></div><p>Forecasting, Scheduling, Inventory, JIT, Lean</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-wind" aria-hidden="true"></i><h4>Refrigeration & Air Conditioning</h4></div><p>Vapor Compression, Absorption, Psychrometrics</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 6</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cogs" aria-hidden="true"></i><h4>Dynamics of Machinery</h4></div><p>Vibration, Balancing, Gyroscopes, Governors</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-robot" aria-hidden="true"></i><h4>Automation & Robotics</h4></div><p>Industrial Robots, Programming, Vision, AI</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-industry" aria-hidden="true"></i><h4>Additive Manufacturing</h4></div><p>3D Printing, Materials, Design for AM, Applications</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-chart-line" aria-hidden="true"></i><h4>Finite Element Analysis</h4></div><p>FEA Theory, Meshing, Analysis, Optimization</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 7</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-laptop-code" aria-hidden="true"></i><h4>Capstone Project I</h4></div><p>Problem Definition, Literature Review, Conceptual Design</p><div class="subject-details"><span class="credits">6 Credits</span><span class="type project">Project</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-graduation-cap" aria-hidden="true"></i><h4>Professional Elective I</h4></div><p>Composite Materials / Tribology / Computational Fluid Dynamics</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type elective">Elective</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-graduation-cap" aria-hidden="true"></i><h4>Professional Elective II</h4></div><p>Automotive Engineering / Aerospace / Energy Systems</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type elective">Elective</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 8</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-laptop-code" aria-hidden="true"></i><h4>Capstone Project II</h4></div><p>Detailed Design, Prototyping, Testing, Documentation</p><div class="subject-details"><span class="credits">6 Credits</span><span class="type project">Project</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-briefcase" aria-hidden="true"></i><h4>Industry Internship</h4></div><p>Manufacturing / Design / R&D experience</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type internship">Internship</span></div></div>
+        </div></div>
+      </div></section>
+
+      <section class="elective-subjects"><div class="card"><h2 class="section-title">Professional Elective Subjects</h2><p class="section-description">Students can choose from the following elective subjects:</p>
+        <div class="elective-categories">
+          <div class="elective-category"><h3>Design & Analysis</h3><ul class="elective-subjects"><li>Advanced Machine Design</li><li>Fracture Mechanics</li><li>Computational Mechanics</li><li>Optimization in Design</li></ul></div>
+          <div class="elective-category"><h3>Manufacturing</h3><ul class="elective-subjects"><li>Precision Engineering</li><li>Micro/Nano Manufacturing</li><li>Sustainable Manufacturing</li><li>Digital Twin in Manufacturing</li></ul></div>
+          <div class="elective-category"><h3>Thermal & Energy</h3><ul class="elective-subjects"><li>Gas Turbines & Jet Propulsion</li><li>Renewable Energy Systems</li><li>Cryogenic Engineering</li><li>Combustion Engineering</li></ul></div>
+          <div class="elective-category"><h3>Automation & Robotics</h3><ul class="elective-subjects"><li>Advanced Robotics</li><li>Industry 4.0 & Smart Manufacturing</li><li>Control Systems Engineering</li><li>Autonomous Vehicles</li></ul></div>
+        </div></div></section>
+
+      <section class="cta-section"><div class="card"><h2>Ready to Engineer the Future?</h2><p>Explore our comprehensive Mechanical Engineering curriculum and begin your path to becoming a successful mechanical engineer.</p><div class="cta-buttons"><a href="/course-registration" class="btn btn-primary btn-lg"><i class="fas fa-edit" aria-hidden="true"></i> Apply Now</a><a href="/contact" class="btn btn-outline btn-lg"><i class="fas fa-phone" aria-hidden="true"></i> Contact Department</a></div></div></section>
+    </div></main>
+</Base>

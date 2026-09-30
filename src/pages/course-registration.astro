@@ -1,0 +1,223 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Course Registration" scripts={["/scripts/registration.js"]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Registration</span>
+      <h1>Course Registration Portal</h1>
+      <p>Register for your next semester courses with ease.</p>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <div class="card auth-wrap auth-wrap-wide">
+        <div class="card-header">
+          <h2>Student Registration Form</h2>
+        </div>
+        <div class="card-body">
+          <!-- progress -->
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-track">
+                <div
+                  class="progress-bar-fill"
+                  id="progress-fill"
+                  role="progressbar"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-label="Registration progress"
+                >
+                </div>
+              </div>
+              <div class="progress-step active" data-step="1">1</div>
+              <div class="progress-step" data-step="2">2</div>
+              <div class="progress-step" data-step="3">3</div>
+              <div class="progress-step" data-step="4">4</div>
+            </div>
+            <div class="progress-labels">
+              <div class="progress-label active">Personal Info</div>
+              <div class="progress-label">Course</div>
+              <div class="progress-label">Academic Year</div>
+              <div class="progress-label">Subjects</div>
+            </div>
+          </div>
+
+          <form id="registration-form" novalidate>
+            <!-- Step 1: personal information -->
+            <div class="form-slide active" id="step-1">
+              <div class="form-group">
+                <label for="student-name">Student Name <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  <input
+                    type="text"
+                    id="student-name"
+                    name="studentName"
+                    placeholder="Enter your full name"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="enrollment-number">Enrollment Number <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-id-card" aria-hidden="true"></i>
+                  <input
+                    type="text"
+                    id="enrollment-number"
+                    name="enrollmentNumber"
+                    placeholder="Enter your enrollment ID"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+
+              <div class="btn-container">
+                <button type="button" class="btn btn-primary btn-block" id="next-step-1">
+                  Next step <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: course selection -->
+            <div class="form-slide" id="step-2" hidden>
+              <div class="form-group">
+                <label for="course">Select Course <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <select id="course" name="course" required autocomplete="off">
+                    <option value="">-- Select Your Course --</option>
+                    <option value="cse">B.Tech [Computer Science Engineering]</option>
+                    <option value="ds-ai">B.Tech [Data Science &amp; AI]</option>
+                    <option value="civil">B.Tech [Civil Engineering]</option>
+                    <option value="mechanical">B.Tech [Mechanical Engineering]</option>
+                    <option value="electrical">B.Tech [Electrical Engineering]</option>
+                    <option value="electronics">B.Tech [Electronics &amp; Communication]</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="specialization">Specialization <span class="hint">(optional)</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-microscope" aria-hidden="true"></i>
+                  <select id="specialization" name="specialization" autocomplete="off">
+                    <option value="">-- Select Specialization (if any) --</option>
+                    <option value="cybersecurity">Cyber Security</option>
+                    <option value="cloud">Cloud Computing</option>
+                    <option value="iot">Internet of Things</option>
+                    <option value="ml">Machine Learning</option>
+                    <option value="robotics">Robotics</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="btn-container btn-container-split">
+                <button type="button" class="btn btn-outline" id="prev-step-2">
+                  <i class="fas fa-arrow-left" aria-hidden="true"></i> Previous
+                </button>
+                <button type="button" class="btn btn-primary" id="next-step-2">
+                  Next <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: academic year -->
+            <div class="form-slide" id="step-3" hidden>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="year">Select Year <span class="req" aria-hidden="true">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    <select id="year" name="year" required autocomplete="off">
+                      <option value="">-- Select Your Year --</option>
+                      <option value="1">1st Year</option>
+                      <option value="2">2nd Year</option>
+                      <option value="3">3rd Year</option>
+                      <option value="4">4th Year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="sem">Select Semester <span class="req" aria-hidden="true">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-book" aria-hidden="true"></i>
+                    <select id="sem" name="semester" required disabled autocomplete="off">
+                      <option value="">-- First Select Year --</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-container btn-container-split">
+                <button type="button" class="btn btn-outline" id="prev-step-3">
+                  <i class="fas fa-arrow-left" aria-hidden="true"></i> Previous
+                </button>
+                <button type="button" class="btn btn-primary" id="next-step-3">
+                  Next <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: subject selection -->
+            <div class="form-slide" id="step-4" hidden>
+              <div class="form-group">
+                <label for="subject">Select Subjects <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-book-open" aria-hidden="true"></i>
+                  <select id="subject" name="subjects" multiple size="6" required disabled autocomplete="off">
+                    <option value="">-- First Select Semester --</option>
+                  </select>
+                </div>
+                <p class="subject-hint">
+                  <i class="fas fa-info-circle" aria-hidden="true"></i>
+                  Hold Ctrl (or Command on Mac) to select multiple subjects
+                </p>
+              </div>
+
+              <div class="btn-container btn-container-split">
+                <button type="button" class="btn btn-outline" id="prev-step-4">
+                  <i class="fas fa-arrow-left" aria-hidden="true"></i> Previous
+                </button>
+                <button type="submit" class="btn btn-primary" id="submit-form">
+                  Submit registration <i class="fas fa-check" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="notification" id="notification" role="status" aria-live="polite" hidden>
+    <div class="notification-icon" aria-hidden="true">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="notification-content">
+      <strong>Success!</strong> Your registration has been submitted.
+    </div>
+  </div>
+</Base>

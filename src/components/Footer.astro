@@ -1,0 +1,69 @@
+---
+import Logo from "./Logo.astro";
+
+const year = new Date().getFullYear();
+
+const explore = [
+  ["Courses", "/courses/cse"],
+  ["Subjects", "/subjects/cse"],
+  ["Fee structure", "/fees/fee-structure"],
+  ["Academic calendar", "/academic-calendar"],
+];
+
+const students = [
+  ["Login", "/login"],
+  ["Create account", "/register"],
+  ["Register for courses", "/course-registration"],
+  ["Get support", "/contact"],
+];
+
+const reach = [
+  ["fa-location-dot", "Orbit Campus, Tech Avenue"],
+  ["fa-phone", "+91 9508015377"],
+  ["fa-envelope", "hello@uniorbit.edu"],
+];
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <Logo />
+      <p class="footer-blurb">
+        One place to register for courses, check fees and keep up with the academic
+        calendar.
+      </p>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        {explore.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+    </div>
+
+    <div>
+      <h4>Students</h4>
+      <ul>
+        {students.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+    </div>
+
+    <div>
+      <h4>Reach us</h4>
+      <ul class="plain">
+        {
+          reach.map(([icon, text]) => (
+            <li>
+              <i class={`fas ${icon}`} aria-hidden="true" />
+              <span>{text}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-base">
+    <span>&copy; {year} UniOrbit. All rights reserved.</span>
+    <span>Built for students, one orbit at a time.</span>
+  </div>
+</footer>

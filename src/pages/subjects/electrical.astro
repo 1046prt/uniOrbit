@@ -1,0 +1,85 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Electrical Engineering Subjects" scripts={[]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Subjects</span>
+      <h1>Electrical Engineering Subjects</h1>
+      <p>Comprehensive curriculum covering power systems, electronics, control systems, and renewable energy</p>
+      <div class="hero-actions">
+        <a href="/course-registration" class="btn btn-primary btn-lg"><i class="fas fa-edit" aria-hidden="true"></i> Register Now</a>
+        <a href="/courses/electrical" class="btn btn-outline btn-lg"><i class="fas fa-graduation-cap" aria-hidden="true"></i> View Course</a>
+      </div>
+    </div>
+  </section>
+  <main class="page-main" id="main">
+    <div class="container">
+      <section class="subject-overview"><div class="card"><h2 class="section-title">Subject Overview</h2><p class="overview-text">Our Electrical Engineering program covers power generation, transmission, distribution, control systems, and modern electronics. Students develop expertise in both traditional power systems and emerging smart grid technologies.</p><div class="overview-stats"><div class="stat-item"><div class="stat-number">38+</div><div class="stat-label">Core Subjects</div></div><div class="stat-item"><div class="stat-number">12+</div><div class="stat-label">Elective Subjects</div></div><div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Semesters</div></div><div class="stat-item"><div class="stat-number">180</div><div class="stat-label">Total Credits</div></div></div></div></section>
+
+      <section class="semester-subjects"><div class="card"><h2 class="section-title">Semester-wise Subject Distribution</h2>
+        <div class="semester-section"><h3 class="semester-title">Semester 1</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-calculator" aria-hidden="true"></i><h4>Engineering Mathematics I</h4></div><p>Calculus, Linear Algebra, Differential Equations</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-atom" aria-hidden="true"></i><h4>Engineering Physics</h4></div><p>Electromagnetism, Optics, Quantum Mechanics, Semiconductors</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-bolt" aria-hidden="true"></i><h4>Basic Electrical Engineering</h4></div><p>DC/AC Circuits, Network Theorems, Transformers</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-code" aria-hidden="true"></i><h4>Programming Fundamentals</h4></div><p>C Programming, Data Structures, Algorithms</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 2</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-calculator" aria-hidden="true"></i><h4>Engineering Mathematics II</h4></div><p>Complex Analysis, Vector Calculus, Transforms</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-microchip" aria-hidden="true"></i><h4>Electronic Devices & Circuits</h4></div><p>Diodes, BJTs, FETs, Amplifiers, Oscillators</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-bolt" aria-hidden="true"></i><h4>Electrical Machines I</h4></div><p>DC Machines, Transformers, Testing, Applications</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-wave-square" aria-hidden="true"></i><h4>Signals & Systems</h4></div><p>Continuous/Discrete Signals, Fourier, Laplace, Z-Transform</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 3</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-microchip" aria-hidden="true"></i><h4>Analog Electronics</h4></div><p>Op-Amps, Filters, Oscillators, Power Amplifiers</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-bolt" aria-hidden="true"></i><h4>Electrical Machines II</h4></div><p>Induction Motors, Synchronous Machines, Special Motors</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-sitemap" aria-hidden="true"></i><h4>Network Theory</h4></div><p>Graph Theory, Two-port Networks, Filters, Synthesis</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cogs" aria-hidden="true"></i><h4>Control Systems I</h4></div><p>Modeling, Time/Frequency Response, Stability, PID</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 4</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-microchip" aria-hidden="true"></i><h4>Digital Electronics</h4></div><p>Logic Families, Combinational/Sequential, Memory, PLDs</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-bolt" aria-hidden="true"></i><h4>Power Systems I</h4></div><p>Generation, Transmission Lines, Distribution, Fault Analysis</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-cogs" aria-hidden="true"></i><h4>Control Systems II</h4></div><p>State Space, Digital Control, Nonlinear, Optimal Control</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-microchip" aria-hidden="true"></i><h4>Microprocessors & Microcontrollers</h4></div><p>8085/8051/ARM, Interfacing, Programming, RTOS</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 5</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-bolt" aria-hidden="true"></i><h4>Power Systems II</h4></div><p>Load Flow, Stability, Protection, SCADA, Smart Grids</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-bolt" aria-hidden="true"></i><h4>Power Electronics</h4></div><p>Converters, Inverters, Choppers, Drives, Applications</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-solar-panel" aria-hidden="true"></i><h4>Renewable Energy Systems</h4></div><p>Solar, Wind, Biomass, Grid Integration, Storage</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-wave-square" aria-hidden="true"></i><h4>Digital Signal Processing</h4></div><p>DFT/FFT, Filter Design, Multirate, Applications</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 6</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-bolt" aria-hidden="true"></i><h4>Electric Drives & Control</h4></div><p>DC/AC Drives, Vector Control, Braking, Selection</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-shield-alt" aria-hidden="true"></i><h4>Power System Protection</h4></div><p>Relays, Circuit Breakers, Distance/Differential Protection</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-microchip" aria-hidden="true"></i><h4>Embedded Systems</h4></div><p>ARM Cortex, RTOS, IoT, Wireless Protocols</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-lightbulb" aria-hidden="true"></i><h4>Illumination Engineering</h4></div><p>Lighting Design, LED Technology, Standards, Control</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type core">Core</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 7</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-laptop-code" aria-hidden="true"></i><h4>Capstone Project I</h4></div><p>Problem Definition, Literature Review, Simulation/Design</p><div class="subject-details"><span class="credits">6 Credits</span><span class="type project">Project</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-graduation-cap" aria-hidden="true"></i><h4>Professional Elective I</h4></div><p>HVDC / FACTS / Smart Grid / EV Technology</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type elective">Elective</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-graduation-cap" aria-hidden="true"></i><h4>Professional Elective II</h4></div><p>Power Quality / Energy Management / PLC & SCADA</p><div class="subject-details"><span class="credits">3 Credits</span><span class="type elective">Elective</span></div></div>
+        </div></div>
+
+        <div class="semester-section"><h3 class="semester-title">Semester 8</h3><div class="subjects-grid">
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-laptop-code" aria-hidden="true"></i><h4>Capstone Project II</h4></div><p>Implementation, Testing, Hardware, Documentation</p><div class="subject-details"><span class="credits">6 Credits</span><span class="type project">Project</span></div></div>
+          <div class="subject-card"><div class="subject-header"><i class="fas fa-briefcase" aria-hidden="true"></i><h4>Industry Internship</h4></div><p>Power Sector / Automation / Renewable Energy Industry</p><div class="subject-details"><span class="credits">4 Credits</span><span class="type internship">Internship</span></div></div>
+        </div></div>
+      </div></section>
+
+      <section class="elective-subjects"><div class="card"><h2 class="section-title">Professional Elective Subjects</h2><p class="section-description">Students can choose from the following elective subjects:</p>
+        <div class="elective-categories">
+          <div class="elective-category"><h3>Power Systems</h3><ul class="elective-subjects"><li>HVDC Transmission</li><li>FACTS & Power Quality</li><li>Smart Grid Technology</li><li>Power System Economics</li></ul></div>
+          <div class="elective-category"><h3>Power Electronics & Drives</h3><ul class="elective-subjects"><li>Advanced Power Converters</li><li>Electric Vehicle Technology</li><li>Renewable Energy Integration</li><li>Wireless Power Transfer</li></ul></div>
+          <div class="elective-category"><h3>Control & Automation</h3><ul class="elective-subjects"><li>Advanced Process Control</li><li>Robotics & Automation</li><li>Industrial IoT</li><li>AI in Power Systems</li></ul></div>
+          <div class="elective-category"><h3>Electronics & Embedded</h3><ul class="elective-subjects"><li>VLSI Design</li><li>ASIC/FPGA Design</li><li>Embedded Linux</li><li>Sensor Networks</li></ul></div>
+        </div></div></section>
+
+      <section class="cta-section"><div class="card"><h2>Ready to Power the Future?</h2><p>Explore our comprehensive Electrical Engineering curriculum and begin your path to becoming a successful electrical engineer.</p><div class="cta-buttons"><a href="/course-registration" class="btn btn-primary btn-lg"><i class="fas fa-edit" aria-hidden="true"></i> Apply Now</a><a href="/contact" class="btn btn-outline btn-lg"><i class="fas fa-phone" aria-hidden="true"></i> Contact Department</a></div></div></section>
+    </div></main>
+</Base>

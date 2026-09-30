@@ -1,0 +1,160 @@
+---
+import Base from "../layouts/Base.astro";
+
+const channels = [
+  ["fa-location-dot", "Address", ["University Campus", "Tech Avenue, Innovation District", "City, State 12345"]],
+  ["fa-phone", "Phone", ["+1 (123) 456-7890", "+1 (123) 456-7891"]],
+  ["fa-envelope", "Email", ["admissions@university.edu", "support@university.edu"]],
+  ["fa-clock", "Office Hours", ["Monday – Friday: 9:00 AM – 5:00 PM", "Saturday: 9:00 AM – 1:00 PM"]],
+];
+
+const topics = [
+  ["admissions", "Admissions Inquiry"],
+  ["course-registration", "Course Registration"],
+  ["technical-support", "Technical Support"],
+  ["fees-payment", "Fees & Payment"],
+  ["general", "General Inquiry"],
+];
+---
+<Base title="Contact" scripts={["/scripts/contact.js"]}>
+  <section class="page-hero" slot="hero">
+    <div class="container">
+      <span class="eyebrow">Support</span>
+      <h1>Contact Us</h1>
+      <p>Get in touch with us for any questions or support.</p>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- contact channels -->
+        <div class="contact-info">
+          <h2>Get in touch</h2>
+          <p>We're here to help. Reach out through any of the following channels.</p>
+
+          {
+            channels.map(([icon, title, lines]) => (
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class={`fas ${icon}`} aria-hidden="true" />
+                </div>
+                <div class="contact-details">
+                  <h3>{title}</h3>
+                  {lines.map((line) => (
+                    <p>{line}</p>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <!-- contact form -->
+        <div class="card">
+          <div class="card-header">
+            <h2>Send us a message</h2>
+          </div>
+          <div class="card-body">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name <span class="req" aria-hidden="true">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="firstName"
+                      placeholder="Enter your first name"
+                      required
+                      autocomplete="given-name"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name <span class="req" aria-hidden="true">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="lastName"
+                      placeholder="Enter your last name"
+                      required
+                      autocomplete="family-name"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter your email address"
+                      required
+                      autocomplete="email"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="hint">(optional)</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Enter your phone number"
+                      autocomplete="tel"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-tag" aria-hidden="true"></i>
+                  <select id="subject" name="subject" required autocomplete="off">
+                    <option value="">-- Select Subject --</option>
+                    {topics.map(([value, label]) => <option value={value}>{label}</option>)}
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-icon">
+                  <i class="fas fa-comment" aria-hidden="true"></i>
+                  <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+              </div>
+
+              <div class="btn-container">
+                <button type="submit" class="btn btn-primary btn-block">
+                  <i class="fas fa-paper-plane" aria-hidden="true"></i> Send message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="notification" id="notification" role="status" aria-live="polite" hidden>
+    <div class="notification-icon" aria-hidden="true">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="notification-content">
+      <strong>Success!</strong> Your message has been sent successfully.
+    </div>
+  </div>
+</Base>
